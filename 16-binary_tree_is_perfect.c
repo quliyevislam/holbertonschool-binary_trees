@@ -1,5 +1,5 @@
 #include "binary_trees.h"
-int depth(binary_tree_t  *node) {
+int depth(const binary_tree_t  *node) {
   int d = 0;
   while (node != NULL) {
     d++;
@@ -8,7 +8,7 @@ int depth(binary_tree_t  *node) {
   return d;
 }
 
-int is_perfect(binary_tree_t *tree, int d, int level) {
+int is_perfect(const binary_tree_t *tree, int d, int level) {
 
   if (tree == NULL)
     return (1);
