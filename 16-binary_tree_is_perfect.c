@@ -24,9 +24,9 @@ is_perfect(tree->right, d, level + 1);
 }
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+int d = depth(tree);
 if (!tree)
 return (0);
-int d = depth(tree);
 return is_perfect(tree, d, 0);
 }
 
