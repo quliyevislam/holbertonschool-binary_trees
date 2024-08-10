@@ -35,7 +35,7 @@ binary_tree_t
 			second = second->parent;
 
 			if (first == second)
-				return (first);
+				return ((binary_tree_t *)first);
 		}
 	}
 
