@@ -1,43 +1,20 @@
-#include "binary_trees.h"
-
-binary_tree_t
-*binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
 {
-	const binary_tree_t *first_copy = first;
-	const binary_tree_t *second_copy = second;
+while (a || b)
+    {
+        if (a == b)
+            return (binary_tree_t *)a;
 
-	while (first_copy)
-	{
-		if (first_copy == second_copy)
-			return (NULL);
+                if (a)
+            a = a->parent;
+        else
+            a = second;
 
-		first_copy = first_copy->parent;
-	}
+        if (b)
+            b = b->parent;
+        else
+            b = first;
+    }
 
-	first_copy = first;
-
-	while (second_copy)
-	{
-		if (second_copy == first_copy)
-			return (NULL);
-
-		second_copy = second_copy->parent;
-	}
-
-	second_copy = second;
-
-	while (first)
-	{
-		first = first->parent;
-
-		while (second)
-		{
-			second = second->parent;
-
-			if (first == second)
-				return ((binary_tree_t *)first);
-		}
-	}
-
-	return (NULL);
+    return NULL;
 }
