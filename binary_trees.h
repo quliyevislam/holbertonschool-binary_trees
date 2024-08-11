@@ -4,18 +4,6 @@
 #include <stddef.h>
 
 /**
- * struct levelorder_queue_s - Represents a node in
- * a level-orderd queue for binary tree traversal.
- * @node: A pointer to the binary tree node stored in the queue.
- * @next: A pointer to the next node in the queue.
- */
-typedef struct levelorder_queue_s
-{
-	binary_tree_t *node;
-	struct levelorder_queue_s *next;
-} levelorder_queue_t;
-
-/**
  * struct binary_tree_s - Binary tree node
  *
  * @n: Integer stored in the node
@@ -32,6 +20,19 @@ struct binary_tree_s
 };
 
 typedef struct binary_tree_s binary_tree_t;
+
+/**
+ * struct levelorder_queue_s - Represents a node in
+ * a level-orderd queue for binary tree traversal.
+ * @node: A pointer to the binary tree node stored in the queue.
+ * @next: A pointer to the next node in the queue.
+ */
+typedef struct levelorder_queue_s
+{
+        binary_tree_t *node;
+        struct levelorder_queue_s *next;
+} levelorder_queue_t;
+
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
