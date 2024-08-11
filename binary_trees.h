@@ -20,7 +20,7 @@ struct binary_tree_s
 };
 
 typedef struct binary_tree_s binary_tree_t;
-
+typedef struct binary_tree_s bst_t;
 /**
  * struct levelorder_queue_s - Represents a node in
  * a level-orderd queue for binary tree traversal.
