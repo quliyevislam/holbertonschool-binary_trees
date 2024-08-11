@@ -16,9 +16,9 @@ bst_t *array_to_bst(int *array, size_t size)
 	if (!array)
 		return (NULL);
 
-	for (i < size)
+	while (i < size)
 	{
-		for (j < i)
+		while (j < i)
 		{
 			if (array[j] == array[i])
 				break;
