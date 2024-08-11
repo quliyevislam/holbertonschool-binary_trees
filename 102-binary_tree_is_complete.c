@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include <stdlib.h>
 
 /**
  * create_queue_node - Allocates and initializes a new node for the queue.
